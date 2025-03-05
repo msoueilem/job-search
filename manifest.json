@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Job Search Assistant",
+    "version": "1.0.1",
+    "description": "A Chrome extension to help software developers with their job search.",
+    "permissions": ["storage", "contextMenus", "activeTab"],
+    "background": {
+      "service_worker": "js/background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "img/icon48.png",
+        "48": "img/icon96.png",
+        "128": "img/icon144.png"
+      }
+    },
+    "icons": {
+      "16": "img/icon48.png",
+      "48": "img/icon96.png",
+      "128": "img/icon144.png"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["js/content-script.js"]
+      }
+    ]
+  }

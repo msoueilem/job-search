@@ -1,37 +1,67 @@
-
-# Job Search Assistant - Chrome Extension
+## Job Search Assistant - Chrome Extension
 
 ## Introduction
 
-The Job Search Assistant is a Chrome Extension designed to aid software developers in their job search. It provides a suite of tools to streamline the process of finding and applying for jobs, including context menu options for quick actions, and features to help organize and track job applications.
+The **Job Search Assistant** is a Chrome Extension designed to help software developers prepare for job interviews by generating a powerful AI-powered research prompt. This prompt can be used to gather detailed insights about a specific job role and company, including interview experiences, questions, and preparation tips.
 
-## Changelog
+The extension extracts the job title and company name from LinkedIn job postings and creates a ready-to-use prompt that you can paste into any AI tool (e.g., ChatGPT, Gemini) to conduct deep research for interview preparation.
 
-- **v1.0.0** (Initial Release)
-  - Basic context menu integration for job search actions.
-  - Initial setup of Chrome extension with manifest and necessary permissions.
+Inspired by this [LinkedIn Post By Anmol Gupta](https://www.linkedin.com/posts/anmol-gupta7_this-is-the-most-powerful-deep-research-ai-activity-7301858817439408128-O-0T?utm_source=share&utm_medium=member_desktop&rcm=ACoAACfkCNYBY6AC1JjxLUzsJunGTjto1bKQ_Cs)
 
-## Context Menu List
+---
 
-- **Search for Jobs**: Opens a new tab with a search for software developer jobs.
-- **Save Job Posting**: Saves the current job posting to a list within the extension for later review.
-- **Apply with Template**: Automatically fills in common application fields with a predefined template.
-- **Track Application**: Adds the current job posting to a tracking list to monitor application status.
+## Features
 
-## Call for Contributors
+### Version 1.0.1
 
-We welcome contributions from the community! If you're interested in helping to improve the Job Search Assistant, please feel free to fork the repository, make your changes, and submit a pull request. Areas where we are currently seeking contributions include:
+- **Get Prompt**:
+  - Right-click on any LinkedIn job posting and select **"Get Prompt"** from the context menu.
+  - The extension will generate a detailed AI prompt to research the job role and company.
+  - The prompt is automatically copied to your clipboard, ready to be pasted into any AI tool.
 
-- Enhancing the job tracking feature.
-- Adding support for additional job boards.
-- Improving the user interface and user experience.
+---
 
-## Extra Features
+## How It Works
 
-- **Job Application Tracker**: Keep track of where you've applied, the status of each application, and any follow-up actions needed.
-- **Resume and Cover Letter Templates**: Access to a variety of templates tailored for software developer positions.
-- **Interview Preparation**: Links to resources and common interview questions for software developers.
-- **Networking Tool**: Integration with professional networking sites to help you connect with industry professionals.
+1. **Navigate to a LinkedIn Job Posting**:
+
+   - Open a job posting on LinkedIn (e.g., `https://www.linkedin.com/jobs/view/...`).
+2. **Right-Click and Select "Get Prompt"**:
+
+   - Right-click anywhere on the page and choose **"Get Prompt"** from the context menu.
+3. **Prompt Generated and Copied**:
+
+   - The extension extracts the job title and company name from the page.
+   - It generates a detailed AI prompt and copies it to your clipboard.
+4. **Paste into an AI Tool**:
+
+   - Paste the prompt into any AI tool (e.g., ChatGPT, Gemini) to get a comprehensive report on the job role and company.
+
+---
+
+## Folder Structure
+
+```
+Job-Search/
+│
+├── img/
+│   └── icon48.png
+│   └── icon96.png
+│   └── icon144.png
+│
+├── js/
+│   ├── background.js
+│   └── content-script.js
+│   └── popup.js
+│
+├── css/
+│   └── popup.css
+│
+├── popup.html
+└── manifest.json
+```
+
+---
 
 ## Installation
 
@@ -42,9 +72,13 @@ To install the Job Search Assistant Chrome Extension, follow these steps:
 3. Enable Developer Mode by clicking the toggle in the top right corner.
 4. Click 'Load unpacked' and select the directory where you downloaded the extension files.
 
+---
+
 ## Support
 
 If you encounter any issues or have suggestions for improvements, please open an issue on our GitHub repository. Your feedback is invaluable to us!
+
+---
 
 ## License
 
